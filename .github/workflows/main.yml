@@ -1,0 +1,40 @@
+name: Build 🧱
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+          
+      - name: Restore
+        run: dotnet restore ./DotnetCodeCoverage.sln
+        
+      - name: Build
+        run: dotnet build ./DotnetCodeCoverage.sln --verbosity minimal --configuration Release --no-restore -p:TreatWarningsAsErrors=true
+        
+      - name: Run tests
+        run: dotnet test ./DotnetCodeCoverage.sln --configuration Release --no-restore --no-build --collect:"Code Coverage" --settings:ms.runsettings.xml
+
+      # - name: ReportGenerator
+      #   run: |
+      #       dotnet tool install -g dotnet-reportgenerator-globaltool
+      #       reportgenerator -reports:"./TestProject1/TestResults/**/coverage.cobertura.xml" -reportTypes:Html -targetDir:"./TestProject1/TestResults/CoverageReport"  
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          format: cobertura
+          file: "./TestProject1/TestResults/**/coverage.cobertura.xml"
