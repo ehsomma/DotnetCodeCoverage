@@ -6,7 +6,7 @@
 
 This project shows how to use code coverage in dotnet and how you can publish the results in the repo readme with badges. 
 
-It uses code coverage (in "covertura" format) with Github Actions and Coveralls. [Coveralls](https://coveralls.io/){:target="_blank"} will read the covertura.xml and will generate the coverage result badge and a beautiful and detailed report of the coverage. Then it will automatically updated with each push (you can modify it to run on pull request).
+It uses code coverage (in "covertura" format) with Github Actions and Coveralls. <a href="https://coveralls.io" target="_blank">Coveralls</a> will read the covertura.xml and will generate the coverage result badge and a beautiful and detailed report of the coverage. Then it will automatically updated with each push (you can modify it to run on pull request).
 
 ## About the Project
 
@@ -14,7 +14,7 @@ The solution contains two projects, each of which includes a class with two func
 
 ## How to Test It
 
-1. Create an account on Coveralls by going to [coveralls.io](https://coveralls.io){:target="_blank"} and registering with your GitHub account. Coveralls will request permission to view your public repositories.
+1. Create an account on Coveralls by going to <a href="https://coveralls.io" target="_blank">coveralls.io</a> and registering with your GitHub account. Coveralls will request permission to view your public repositories.
 2. Create a new `public` repository on GitHub.
 3. Access Coveralls and select the `(+)ADD REPOS` option.
 4. Search for your repository (if you can't find it, click the `SYNC REPOS` button) and switch the repository toggle (`ON/OFF`) to ON.
