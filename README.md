@@ -14,7 +14,7 @@ The solution contains two projects, each of which includes a class with two func
 
 ## How to Test It
 
-1. Create an account on Coveralls by going to <a href="https://coveralls.io" target="_blank">coveralls.io</a> and registering with your GitHub account. Coveralls will request permission to view your public repositories.
+1. Create an account on Coveralls by going to <a href="https://coveralls.io" target="_blank">coveralls.io</a> and registering with your GitHub account (it is free for public repos!). Coveralls will request permission to view your public repositories.
 2. Create a new `public` repository on GitHub.
 3. Access Coveralls and select the `(+)ADD REPOS` option.
 4. Search for your new repository (if you can't find it, click the `SYNC REPOS` button) and switch the repository toggle (`ON/OFF`) to ON in the repos list.
@@ -23,3 +23,5 @@ The solution contains two projects, each of which includes a class with two func
 7. Push the code to your new repository (the one you just connected to Coveralls).
 
 After pushing, the pipeline (GitHub Actions) will run, when it finished, you will see the code coverage badge with a link to the report in the `README.md` file as at the top of this document.
+
+![image](./images/report-example.png)
