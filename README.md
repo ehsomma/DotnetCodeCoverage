@@ -16,8 +16,8 @@ The solution contains two projects, each of which includes a class with two func
 
 1. Create an account on Coveralls by going to [coveralls.io](https://coveralls.io){:target="_blank"} and registering with your GitHub account. Coveralls will request permission to view your public repositories.
 2. Create a new `public` repository on GitHub.
-3. Access Coveralls and select the "(+)ADD REPOS" option.
-4. Search for your repository (if you can't find it, click the "SYNC REPOS" button) and switch the repository toggle (ON/OFF) to ON.
+3. Access Coveralls and select the `(+)ADD REPOS` option.
+4. Search for your repository (if you can't find it, click the `SYNC REPOS` button) and switch the repository toggle (`ON/OFF`) to ON.
 5. Download the code from this repository.
 6. Open the `README.md` file and replace "ehsomma/DotnetCodeCoverage" with your repository's data (\<your-account\>/\<repo-name\>) in all the links.
 7. Push the code to your new repository (the one you just connected to Coveralls).
