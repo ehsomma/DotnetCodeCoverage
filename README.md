@@ -1,4 +1,5 @@
-# DotnetCodeCoverage
+# Dotnet code coverage (badge and report)
+
 [![.github/workflows/ci.yml](https://github.com/ehsomma/DotnetCodeCoverage/actions/workflows/main.yml/badge.svg)](https://github.com/ehsomma/DotnetCodeCoverage/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/ehsomma/DotnetCodeCoverage/badge.svg?branch=master)](https://coveralls.io/github/ehsomma/DotnetCodeCoverage?branch=master)
 [![GitHub Issues](https://img.shields.io/github/issues/ehsomma/DotnetCodeCoverage)](https://github.com/ehsomma/DotnetCodeCoverage/issues)
@@ -14,7 +15,7 @@ The solution contains two projects, each of which includes a class with two func
 
 ## How to Test It
 
-1. Create an account on Coveralls by going to <a href="https://coveralls.io" target="_blank">coveralls.io</a> and registering with your GitHub account (it is free for public repos!). Coveralls will request permission to view your public repositories.
+1. Create an account on Coveralls by going to <a href="https://coveralls.io" target="_blank">coveralls.io</a> and registering with your GitHub account (it is **free** for public repos!). Coveralls will request permission to view your public repositories.
 2. Create a new `public` repository on GitHub.
 3. Access Coveralls and select the `(+)ADD REPOS` option.
 4. Search for your new repository (if you can't find it, click the `SYNC REPOS` button) and switch the repository toggle (`ON/OFF`) to ON in the repos list.
