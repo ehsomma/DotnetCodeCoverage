@@ -25,16 +25,11 @@ jobs:
         run: dotnet build ./DotnetCodeCoverage.sln --verbosity minimal --configuration Release --no-restore -p:TreatWarningsAsErrors=true
         
       - name: Run tests
-        run: dotnet test ./DotnetCodeCoverage.sln --configuration Release --no-restore --no-build --collect:"Code Coverage" --settings:ms.runsettings.xml
-
-      # - name: ReportGenerator
-      #   run: |
-      #       dotnet tool install -g dotnet-reportgenerator-globaltool
-      #       reportgenerator -reports:"./TestProject1/TestResults/**/coverage.cobertura.xml" -reportTypes:Html -targetDir:"./TestProject1/TestResults/CoverageReport"  
+        run: dotnet test ./DotnetCodeCoverage.sln --configuration Release --verbosity normal --no-restore --no-build --collect:"Code Coverage" --results-directory ./coverage --settings:ms.runsettings.xml
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           format: cobertura
-          file: "./TestProject1/TestResults/**/coverage.cobertura.xml"
+          file: "coverage/**/coverage.cobertura.xml"
